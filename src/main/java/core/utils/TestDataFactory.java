@@ -5,7 +5,7 @@ import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class TestDataGenerator {
+public class TestDataFactory {
 
     public static int getRandomOrderID() {
         return ThreadLocalRandom.current().nextInt(1, 11);

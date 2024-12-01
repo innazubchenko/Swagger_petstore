@@ -1,7 +1,7 @@
-package API.response.mappers;
+package API.mappers;
 
-import API.response.json.InventoryDTO;
-import API.response.json.OrderDTO;
+import API.models.InventoryDTO;
+import API.models.OrderDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import core.custom_exceptions.CustomJsonProcessingException;
@@ -11,8 +11,8 @@ import lombok.SneakyThrows;
 
 import java.util.Map;
 
-import static API.implementation.builders.OrderPayloadBuilder.getPayloadForCreateOrderRequest;
-import static core.helpers.JacksonDateTimeMapHelper.createDateTimeMappingHelper;
+import static API.builders.OrderPayloadBuilder.getPayloadForCreateOrderRequest;
+import static API.mappers.JacksonDateTimeMapper.createDateTimeMappingHelper;
 import static org.apache.hc.core5.http.HttpStatus.SC_OK;
 
 public class DTOMapper {

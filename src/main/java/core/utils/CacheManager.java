@@ -1,9 +1,9 @@
-package core.helpers;
+package core.utils;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class CacheHelper {
+public class CacheManager {
     private static final InheritableThreadLocal<Map<String, Object>> projectContext = new InheritableThreadLocal<>();
 
     public static void startCacheContext() {

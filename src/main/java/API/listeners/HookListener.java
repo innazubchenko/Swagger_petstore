@@ -1,14 +1,14 @@
-package core.listeners;
+package API.listeners;
 
-import core.custom_annotations.NonAuthorized;
+import API.custom_annotations.NonAuthorized;
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
 
 import java.lang.reflect.Method;
 
-import static API.APIConfig.deleteAuthorizationToken;
-import static API.APIConfig.setAuthorizationToken;
+import static API.config.APIConfig.deleteAuthorizationToken;
+import static API.config.APIConfig.setAuthorizationToken;
 
 public class HookListener implements IInvokedMethodListener {
 

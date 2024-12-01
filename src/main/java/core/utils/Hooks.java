@@ -1,14 +1,12 @@
 package core.utils;
 
-import core.helpers.CacheHelper;
-
 public class Hooks {
     public static void startCacheContext() {
-        CacheHelper.startCacheContext();
+        CacheManager.startCacheContext();
     }
 
     public static void destroyCacheContext() {
-        CacheHelper.destroyCacheContext();
+        CacheManager.destroyCacheContext();
     }
 
 }

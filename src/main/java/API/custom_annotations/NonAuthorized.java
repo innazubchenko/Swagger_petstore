@@ -1,4 +1,4 @@
-package core.custom_annotations;
+package API.custom_annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

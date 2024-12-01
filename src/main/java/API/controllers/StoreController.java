@@ -1,6 +1,6 @@
-package API.implementation.controllers;
+package API.controllers;
 
-import API.implementation.RetryOptions;
+import API.config.RetryOptions;
 import core.enums.ORDER_STATUSES;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -8,9 +8,9 @@ import io.restassured.response.Response;
 
 import java.util.function.Supplier;
 
-import static API.APIConfig.getBaseUri;
-import static API.response.mappers.DTOMapper.createPayloadForOrderRequest;
-import static core.helpers.OrderHelper.getExistingOrderID;
+import static API.config.APIConfig.getBaseUri;
+import static API.mappers.DTOMapper.createPayloadForOrderRequest;
+import static core.utils.OrderManager.getExistingOrderID;
 
 public class StoreController {
     private static final String INVENTORY_ENDPOINT = "/store/inventory";

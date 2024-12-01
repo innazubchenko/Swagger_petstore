@@ -1,8 +1,8 @@
-package store_tests;
+package API_tests.store_tests;
 
-import API.response.json.InventoryDTO;
-import API.response.json.OrderDTO;
-import core.custom_annotations.NonAuthorized;
+import API.models.InventoryDTO;
+import API.models.OrderDTO;
+import API.custom_annotations.NonAuthorized;
 import core.enums.ORDER_STATUSES;
 import core.enums.TestCache;
 import io.restassured.response.Response;
@@ -13,15 +13,15 @@ import org.testng.annotations.Test;
 
 import java.util.Map;
 
-import static API.implementation.controllers.StoreController.sendDeleteOrderByIDRequest;
-import static API.implementation.controllers.StoreController.sendGetOrderByIDRequest;
-import static API.implementation.controllers.StoreController.sendGetStoreInventoryRequest;
-import static API.implementation.controllers.StoreController.sendPostOrderAtStoreRequest;
-import static API.response.mappers.DTOMapper.getInventoryDTOFromResponse;
-import static API.response.mappers.DTOMapper.getMapFromDTO;
-import static API.response.mappers.DTOMapper.getOrderDTOFromResponse;
-import static core.helpers.CacheHelper.getValue;
-import static core.helpers.CacheHelper.setValue;
+import static API.controllers.StoreController.sendDeleteOrderByIDRequest;
+import static API.controllers.StoreController.sendGetOrderByIDRequest;
+import static API.controllers.StoreController.sendGetStoreInventoryRequest;
+import static API.controllers.StoreController.sendPostOrderAtStoreRequest;
+import static API.mappers.DTOMapper.getInventoryDTOFromResponse;
+import static API.mappers.DTOMapper.getMapFromDTO;
+import static API.mappers.DTOMapper.getOrderDTOFromResponse;
+import static core.utils.CacheManager.getValue;
+import static core.utils.CacheManager.setValue;
 import static org.apache.hc.core5.http.HttpStatus.SC_OK;
 import static org.assertj.core.api.Assertions.assertThat;
 

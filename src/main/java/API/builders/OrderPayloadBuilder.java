@@ -1,13 +1,13 @@
-package API.implementation.builders;
+package API.builders;
 
-import API.response.json.OrderDTO;
+import API.models.OrderDTO;
 import core.enums.ORDER_STATUSES;
 import core.enums.TestCache;
 import lombok.extern.slf4j.Slf4j;
 
-import static core.helpers.CacheHelper.setValue;
-import static core.utils.TestDataGenerator.getRandomOrderID;
-import static core.utils.TestDataGenerator.getShipmentDate;
+import static core.utils.CacheManager.setValue;
+import static core.utils.TestDataFactory.getRandomOrderID;
+import static core.utils.TestDataFactory.getShipmentDate;
 
 @Slf4j
 public class OrderPayloadBuilder {

@@ -1,4 +1,4 @@
-package API.response.json;
+package API.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
